@@ -1,0 +1,37 @@
+<ui:composition template="/WEB-INF/templates/log.xhtml" 
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+<ui:define name="title"></ui:define>
+<ui:define name="content">
+    <div class ="login-box">
+        <img src="https://formacion.uam.es/pluginfile.php/48081/course/section/12385/ApS%20LOGO.png" class="avatar" alt="Avatar Image"/>
+        <h1>Bienvenido</h1>
+    <h:form id="login">
+    <table>
+        <tr>
+            <td>Introduce tu DNI </td>
+            <td><h:inputText value="#{login.usuario.usuario}"/></td>
+        </tr>
+        <tr>
+            <td>Introduce Contraseña: </td>
+            <td><h:inputSecret value="#{login.usuario.contrasenia}"/></td>
+        </tr>
+        <tr>
+            <td>Confirma Contraseña: </td>
+            <td><h:inputSecret value="#{login.usuario.contrasenia}"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h:commandButton value="Registrarse" />
+            </td>
+        </tr>
+    </table>
+        <td> <h:commandLink action="#{controlAutorizacion.logout()}" value="Iniciar sesion"/></td>
+</h:form>
+        </div>
+
+<h:messages/>
+</ui:define>
+</ui:composition>

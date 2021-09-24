@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center">
+        <div class="sidebar-brand-text mx-3" style="color:white">Aprendizaje Servicios </div>
+      </a>
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0"/>
+      <!-- Nav Item - Dashboard -->
+            <h:form >
+                <ul class="menulist">
+                    <c:if test="#{!empty controlAutorizacion.usuario}">
+                        <div class ="opciones">
+                        <li><h:commandLink  action="#{controlAutorizacion.home()}" value="Home" style="text-decoration:none;color:white;"/></li>
+                        
+                        <li><h:commandLink action="#{controlAutorizacion.perfil()}" value="Perfil" style="text-decoration:none;color:white;" /></li>
+                        <li><h:commandLink action="#{controlAutorizacion.noticias()}" value="Noticias" style="text-decoration:none;color:white;"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.Actividades()}" value="Actividades" style="text-decoration:none;color:white;"/></li>
+                        <c:if test="#{controlAutorizacion.verRol() == 2}">
+                        <li><h:commandLink action="#{controlAutorizacion.editarUsuarios()}" value="Editar usuarios" style="text-decoration:none;color:white;"/></li>
+                        <li><h:commandLink action="#{controlAutorizacion.verInformes()}" value="Informes" style="text-decoration:none;color:white;"/></li>
+                        </c:if>
+                        <li><h:commandLink action="#{controlAutorizacion.logout()}" value="Salir" style="text-decoration:none;color:white;"/></li>
+                        </div>
+                    </c:if>
+                </ul>
+            </h:form>
+      <!-- Divider -->
+      <hr class="sidebar-divider"/>
+    </ul>
+</html>

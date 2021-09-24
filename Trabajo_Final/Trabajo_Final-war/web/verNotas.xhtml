@@ -1,0 +1,38 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="title">Mis notas</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="controlEvaluaciones">
+                    <c:forEach var="contador"  begin="0" end="#{controlEvaluaciones.misNotas()-1}">
+                                <hr>
+                                    <table>
+                                        <tr>
+                                            <td>Actividad: </td>
+                                            <td><h:outputText value="#{controlEvaluaciones.evaluaciones.get(contador).getInscripcion().getActividad().getTitulo()}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Puntuación: </td>
+                                            <td><h:outputText value="#{controlEvaluaciones.evaluaciones.get(contador).getPuntuacion()}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Comentario: </td>
+                                            <td><h:outputText value="#{controlEvaluaciones.evaluaciones.get(contador).getComentario()}"/></td>
+                                        </tr>
+                                    </table>
+                                </hr>
+                                <hr></hr>
+                        </c:forEach>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

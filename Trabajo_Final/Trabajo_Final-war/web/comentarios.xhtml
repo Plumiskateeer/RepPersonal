@@ -1,0 +1,29 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="title">Comentarios sobre las actividades</ui:define>
+    <ui:define name="content">
+
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="controlComentarios">
+                    <table>
+                        <tr>
+                            <td>Introduzca el ID de la actividad: </td>
+                                <td><h:inputText value="#{id}"/></td>
+                                <td colspan="2">
+                                    <h:commandButton action="#{controlComentarios.setidAct(id)}" value="Buscar comentarios"/>
+                                </td>
+                        </tr>
+                    </table>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

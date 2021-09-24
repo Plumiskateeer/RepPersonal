@@ -1,0 +1,43 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="title">Editando noticia</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="editar">
+                        <tr>
+                            <td>Id:  </td>
+                            <td><h:inputText value="#{controlNoticias.noticia.id}"/></td>
+                            <td colspan="2">
+                                <h:commandButton value="Buscar noticia" action="#{controlNoticias.buscarNoticia()}"/>
+                            </td>
+                        </tr>
+                    <table>
+                        <hr>
+                        <tr>
+                            <td>Titulo:  </td>
+                            <td><h:inputText value="#{controlNoticias.noticia.titulo}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Informacion:  </td>
+                            <td><h:inputText value="#{controlNoticias.noticia.informacion}"/></td>
+                        </tr>
+                        <td colspan="2">
+                            <h:commandButton value="Guardar" action="#{controlNoticias.modificarNoticia()}"/>
+                            <h:commandButton value="Borrar noticia" action="#{controlNoticias.borrarNoticia()}"/>
+                        </td>
+                        </hr>
+                    </table>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

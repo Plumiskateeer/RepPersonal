@@ -1,0 +1,38 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="title">Mis informes registrados</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="controlInformes">
+                    <c:forEach var="contador"  begin="0" end="#{controlInformes.informesUsuario(controlAutorizacion.usuario)-1}">
+                            <hr>
+                                    <table>
+                                        <tr>
+                                            <td>Titulo: </td>
+                                            <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getTitulo()}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Contenido: </td>
+                                            <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getContenido()}"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Actividad: </td>
+                                            <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getActividad().getTitulo()}"/></td>
+                                        </tr>
+                                        
+                                    </table>
+                                    <li><h:commandButton value="Descargar informe (PDF)"/></li>
+                                </hr>
+                    </c:forEach>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+    </ui:define>
+</ui:composition>

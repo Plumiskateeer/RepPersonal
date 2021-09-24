@@ -1,0 +1,51 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="title">Informes</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="controlInformes">
+                    <li><h:commandButton action="#{controlAutorizacion.crearInforme()}" value="Crear Informe"/>
+                    <h:commandButton action="#{controlAutorizacion.editarInforme()}" value="Editar Informe"/>
+                    </li>
+                     <h:dataTable value="#{controlInformes.mostrarInformesOrganizacion(controlAutorizacion.usuario)}" var="infor">
+                         <h:column>
+                            <f:facet name="header">
+                               <h:outputText value="ID: "></h:outputText>
+                            </f:facet>
+                             <h:outputText value="#{infor.id}"></h:outputText>
+                         </h:column>
+                         <h:column>
+                            <f:facet name="header">
+                               <h:outputText value="Titulo: "></h:outputText>
+                            </f:facet>
+                             <h:outputText value="#{infor.titulo}"></h:outputText>
+                         </h:column>
+                         <h:column>
+                            <f:facet name="header">
+                               <h:outputText value="Contenido: "></h:outputText>
+                            </f:facet>
+                             <h:outputText value="#{infor.contenido}"></h:outputText>
+                         </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                               <h:outputText value="Actividad: "></h:outputText>
+                            </f:facet>
+                            <h:outputText value="#{infor.actividad.titulo}"></h:outputText>
+                         </h:column>
+                        
+                      </h:dataTable>
+                </h:form>
+
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

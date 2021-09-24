@@ -1,0 +1,67 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="title">Actividades</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="controlEvaluaciones">
+                    <c:if test="#{controlAutorizacion.verRol() == 1}">
+                        <h:commandButton action="#{controlAutorizacion.verMisActividadesOrganizacion()}" value="Mis actividades creadas"/>
+                    </c:if>
+                    <c:if test="#{controlAutorizacion.verRol() == 2}">
+                        <li><h:commandButton action="#{controlAutorizacion.editarActividades()}" value="Editar actividades"/></li>
+                    </c:if>
+                   
+                    <h:form id="controlActividades">
+                        <h:dataTable value="#{controlActividades.volcadoActividades()}" var="dato">
+                         <h:column>
+                            <f:facet name="header">
+                               <h:outputText value="Titulo actividad: "></h:outputText>
+                            </f:facet>
+                            <h:outputText value="#{dato.getTitulo()}"></h:outputText>
+                            
+                         </h:column>
+                         <h:column>
+                            <f:facet name="header">
+                               <h:outputText value="Informacion: "></h:outputText>
+                            </f:facet>
+                            <h:outputText value="#{dato.getInformacion()}"></h:outputText>
+                         </h:column>
+                         <h:column>
+                            <h:form>
+                                <h:commandButton action="#{controlInscritos.inscribirseActividad(dato.titulo)}" value="Inscribirse"></h:commandButton>
+                            </h:form>
+                         </h:column>
+                            <h:form id="controlComentarios">
+                                    <h:dataTable value="#{controlComentarios.volcadoComentariosActividad(dato)}" var="comentarios">
+                                 <h:column>
+                                    <f:facet name="header">
+                                       <h:outputText value="Usuario: "></h:outputText>
+                                    </f:facet>
+                                    <h:outputText value="#{comentarios.usuario.usuario}"></h:outputText>
+                                 </h:column>
+                                 <h:column>
+                                    <f:facet name="header">
+                                        <p><h:outputText value="Comentario: "></h:outputText></p>
+                                    </f:facet>
+                                    <h:outputText value="#{comentarios.contenido}"></h:outputText>
+                                 </h:column>
+                                    </h:dataTable>
+                                
+                            </h:form>
+                            
+                      </h:dataTable>
+                    </h:form>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

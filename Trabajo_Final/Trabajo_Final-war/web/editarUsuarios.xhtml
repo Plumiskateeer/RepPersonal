@@ -1,0 +1,61 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="title">Editar usuario</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="login">
+                    <table>
+                        <tr>
+                            <td>Usuario:  </td>
+                            <td><h:inputText value="#{login.usuario.usuario}"/></td>
+                            <td colspan="2">
+                                <h:commandButton value="Buscar usuario" action="#{login.buscarUsuario()}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>DNI </td>
+                            <td><h:inputText value="#{login.usuario.dni}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Cambiar nombre:  </td>
+                            <td><h:inputText value="#{login.usuario.nombre}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Contraseña: </td>
+                            <td><h:inputText value="#{login.usuario.contrasenia}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Email:  </td>
+                            <td><h:inputText value="#{login.usuario.email}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Dirección: </td>
+                            <td><h:inputText value="#{login.usuario.direccion}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Intereses: </td>
+                            <td><h:inputText value="#{login.usuario.intereses}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Horarios: </td>
+                            <td><h:inputText value="#{login.usuario.horarios}"/></td>
+                        </tr>
+                        <td colspan="2">
+                            <h:commandButton value="Guardar" action="#{login.editarUsuario()}"/>
+                            <h:commandButton value="Borrar usuario" action="#{login.borrarUsuario()}"/>
+                        </td>
+                    </table>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

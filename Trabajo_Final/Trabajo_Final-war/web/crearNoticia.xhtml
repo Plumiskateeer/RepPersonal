@@ -1,0 +1,37 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:define name="title">Crear noticia</ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <c:if test="#{controlAutorizacion.verRol() == 2}">
+                    <h:form id="controlNoticias">
+                        <table>
+                            <tr>
+                                <td>ID:  </td>
+                                <td><h:inputText value="#{controlNoticias.noticia.id}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Titulo:  </td>
+                                <td><h:inputText value="#{controlNoticias.noticia.titulo}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Informacion: </td>
+                                <td><h:inputText value="#{controlNoticias.noticia.informacion}"></h:inputText></td>
+                            </tr>
+                        </table>
+                        <h:commandButton value="Crear noticia" action="#{controlNoticias.bbdd.insertarNoticia(controlNoticias.noticia)}"/>
+                    </h:form>
+                </c:if>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

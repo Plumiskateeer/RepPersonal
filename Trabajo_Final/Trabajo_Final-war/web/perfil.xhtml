@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="title"></ui:define>
+    <ui:define name="content">
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                
+        <h:form>
+        <c:if test="#{controlAutorizacion.verRol() == 0}">
+            <nav class="navbar navbar-expand navbar-#6495ED bg-white topbar mb-4 static-top shadow" >
+            <h:commandButton action="#{controlAutorizacion.verEvaluaciones()}" value="Mis evaluaciones" />
+            <h:commandButton action="#{controlAutorizacion.verMisActividadesUsuario()}" value="Mis actividades registradas" />
+            <h:commandButton action="#{controlAutorizacion.verNotas()}" value="Mis notas"/>
+            </nav>
+        </c:if>            
+               </h:form>
+          
+                <h:form id="perfil">
+                    <div class = "caja">
+                    <table>
+                        <tr>
+                            <td>Usuario: </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getUsuario()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Nombre:  </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getNombre()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Dni:  </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getDni()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Email:  </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getEmail()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Fecha nacimiento: </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getFechaNacimiento()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Dirección: </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getDireccion()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Intereses: </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getIntereses()}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Horarios: </td>
+                            <td><h:outputText value="#{controlAutorizacion.usuario.getHorarios()}"/></td>
+                        </tr>
+                    </table>
+                        <li><h:commandButton action="#{controlAutorizacion.editarPerfil()}" value="Editar Perfil"/></li>
+                     </div>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>
+</html>

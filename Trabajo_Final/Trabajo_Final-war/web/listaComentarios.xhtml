@@ -1,0 +1,39 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="title">Comentarios actuales</ui:define>
+    <ui:define name="content">
+
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="controlComentarios">
+                   
+                   
+                                                
+                   
+                    <c:forEach var="contador"  begin="0" end="#{controlComentarios.busca()-1}">
+                            <hr>
+                                <table>
+                                    <tr>
+                                        <td><h:outputText value="#{controlComentarios.getLista().get(contador)}"/></td>
+                                    </tr>
+                                </table>
+                                
+                            </hr>
+                    </c:forEach>
+                </h:form>
+                <h:form id="c">
+                    <hr>
+                        <td><h:inputText value="#{comentario}"/> <h:commandButton value="Comentar" /></td>
+                    </hr>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>

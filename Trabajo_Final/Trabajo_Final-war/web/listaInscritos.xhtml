@@ -1,0 +1,33 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="title">Inscritos</ui:define>
+    <ui:define name="content">
+
+        <c:choose>
+            <c:when test="#{!empty controlAutorizacion.usuario}">
+                <h:form id="controlInscritos">
+                    <p>
+                    <td>Usuarios inscritos por el momento: </td>
+                    </p>
+                    <c:forEach var="contador"  begin="0" end="#{controlInscritos.busca()-1}">
+                            <hr>
+                                    <table>
+                                        <tr>
+                                            <td><h:outputText value="#{controlInscritos.getLista().get(contador)}"/></td>
+                                        </tr>
+                                        <td><h:inputText value="#{nombre}"/><h:commandButton value="Evaluar"/></td>
+                                    </table>
+                            </hr>
+                    </c:forEach>
+                </h:form>
+            </c:when>
+            <c:otherwise>
+                <p>Error.</p>
+            </c:otherwise>
+        </c:choose>
+        <h:messages/>
+    </ui:define>
+</ui:composition>
