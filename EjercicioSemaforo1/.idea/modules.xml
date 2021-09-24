@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EjemploJardinesExMutua.iml" filepath="$PROJECT_DIR$/EjemploJardinesExMutua.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JardinesSolucionPeterson/JardinesSolucionPeterson.iml" filepath="$PROJECT_DIR$/JardinesSolucionPeterson/JardinesSolucionPeterson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica5/Practica5.iml" filepath="$PROJECT_DIR$/Practica5/Practica5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProdCons1/ProdCons1.iml" filepath="$PROJECT_DIR$/ProdCons1/ProdCons1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Practica5/buffer.iml" filepath="$PROJECT_DIR$/Practica5/buffer.iml" />
+    </modules>
+  </component>
+</project>

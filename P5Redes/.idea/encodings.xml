@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/es/uma/rysd/app/Main.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/es/uma/rysd/app/SWClient.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/es/uma/rysd/entities/Film.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/es/uma/rysd/entities/Person.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/es/uma/rysd/entities/Planet.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/es/uma/rysd/entities/ResourceCountResponse.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/es/uma/rysd/entities/Vehicle.java" charset="windows-1252" />
+  </component>
+</project>
