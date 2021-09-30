@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="96517521-463A-8765-DD9D-D0852A2D02FD" name="Evaluación">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 10:54:26 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id evaluacion" id="0320C4DA-CE92-8223-7DFE-7C9F427CC92F">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 10:54:43 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comentario" id="E57B5C91-32C0-15E2-9D8A-F6356C941AFE">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 10:55:05 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="puntuacion" id="78C2388C-2C0F-B1D1-E36A-5226389C77EC">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 10:55:31 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaSubida" id="2D112C81-2793-0767-A5ED-5A5DE866E32E">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-25 11:40:46 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id usuario" id="DCBA1D5F-B2B5-7CB6-7222-DC1030941B4C">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 10:58:46 UTC</createdTime>
+<generatorID>E91FCEA5-6D11-E8F0-8E6B-D48E6207FCA6</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>66D77AC5-6AED-EC71-C095-A70BD771283E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id actividad" id="18FE86B6-1B26-53A4-2E10-8BCE3790D4D9">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 11:00:03 UTC</createdTime>
+<generatorID>B52AC188-3FF3-21EC-F244-A134E053AEBD</generatorID>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>B0168FF2-2D2C-E985-2DBC-2B3768CA5CEF</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="evaluado" id="D84DDC6C-DB3A-4333-0AF5-9554CD2BC87D">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-30 09:22:39 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="24D1C3F1-6BAA-32C8-0F4E-B5D519844245" name="Evaluación PK">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 10:55:00 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0320C4DA-CE92-8223-7DFE-7C9F427CC92F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

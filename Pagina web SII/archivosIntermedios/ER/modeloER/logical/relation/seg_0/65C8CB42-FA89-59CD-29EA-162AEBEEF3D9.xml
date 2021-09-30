@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relacion Ac-I" directorySegmentName="seg_0" id="65C8CB42-FA89-59CD-29EA-162AEBEEF3D9">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-25 11:29:22 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<sourcePk>5E673232-4F03-C9DC-1FE8-FBD587925D9A</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>Posee</nameOnSource>
+<nameOnTarget>Pertenece a</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>227B6787-1671-5DD4-70ED-47B72E35D643</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BE63E5D5-4BE5-2B87-D938-34472566DFCF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

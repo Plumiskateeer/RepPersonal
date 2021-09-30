@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relacion U-Ar" directorySegmentName="seg_0" id="EF63F5DF-42AC-32E9-3547-2107C0BE9B03">
+<createdBy>angel</createdBy>
+<createdTime>2020-03-24 11:05:13 UTC</createdTime>
+<ownerDesignName>modeloER</ownerDesignName>
+<engineerTo>
+<item key="B4BA0B1B-EBB0-3A99-60E4-8C02002A1EBF" value="true"/>
+</engineerTo>
+<sourcePk>182BEA82-17A2-A4C7-AD2B-88E7DE369345</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>Carga</nameOnSource>
+<nameOnTarget>Es manipulado por</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>14F82722-C17C-D745-F273-B61F7B2A5899</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D4D991D4-A553-F503-6E7E-05C5FBAEC97D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

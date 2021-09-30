@@ -1,0 +1,31 @@
+body{ 
+   background:#feffb1;
+    }
+p{
+   margin-left:30pt;
+   margin-right:35pt;  
+   font-family:courier;
+   }
+img{
+   border-style:outset; 
+   border-color:#a62913;
+    }
+h1{ 
+   text-align: center; 
+   background-color: #adde4e;
+   color:#a62913; font-size: 55px; 
+   border-style:outset; 
+   border-color:#a62913;
+   } 
+h2{
+   background-color :#a62913;
+   font-size:30px; font-family:arial;
+   color:#feffb1; 
+   }
+A:link{
+  color:green; 
+  text-decoration:none;
+   }
+A:visited{
+   color:green
+   }

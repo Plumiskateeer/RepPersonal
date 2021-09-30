@@ -1,0 +1,28 @@
+body{ 
+    background-color:#9099ae; 
+	}
+h1{ 
+    
+	font-family: Times New Romans  ;
+	color:#e6e0e2;
+	font-size: 60;
+	} 
+h2{ 
+    
+	font-family:Times;
+	
+    
+	}
+h3{
+   font-family:Times;
+   font-size:16px;
+   
+    }
+p{ 
+   font-size:16px; 
+   font-family:Times; 
+   }
+
+a:visited{
+   color:#0065cb
+	}

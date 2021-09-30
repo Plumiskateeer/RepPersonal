@@ -1,0 +1,38 @@
+body{ 
+    background: #3d361a; 
+	}
+img{
+	border-style:outset; 
+	border-color:#878d67; 
+	}
+h1{ 
+    background-image: URL(imagenes/fondojungla.jpg);
+	Padding-top:75px;
+	Padding-bottom:75px;
+	font-family: forte  ;
+	color:#da8163;
+	font-size: 80;
+	} 
+h2{ 
+    background:linear-gradient(to right, rgba(23,65,64,1), rgba(23,65,64,0) 300px); 
+	font-family:arial;
+	color:#feffb1;
+    padding-left:9;
+	border-style:solid;
+	border-left-width:13;
+	border-top-width:1;
+	border-right-width:1; 
+	}
+p{ 
+   margin-left:30pt;
+   margin-right:37pt; 
+   color:#d1c8a9; 
+   font-size:13; 
+   font-family:courier; 
+   }
+a:link{ 
+   color:#d48159; 
+   }
+a:visited{
+   color:#d48159
+	}
