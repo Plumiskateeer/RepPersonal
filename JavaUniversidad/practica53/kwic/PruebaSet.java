@@ -6,29 +6,29 @@ public class PruebaSet {
 
 	public static void main (String[] args)
 	{
-		//OPERACIONES BÁSICAS
-		//1. Declaramos una variable para guardar un conjunto no ordenado de números enteros
+		//OPERACIONES Bï¿½SICAS
+		//1. Declaramos una variable para guardar un conjunto no ordenado de nï¿½meros enteros
 		Set<Integer> conj1;
-		//¿Qué pasa si cambiamos Set<Integer> por Collection<Integer>?
+		//ï¿½Quï¿½ pasa si cambiamos Set<Integer> por Collection<Integer>?
 		//Collection<Integer> conj1;
 	
-		//2. Creamos un conjunto de enteros usando la implementación disponible: HashSet<T>, invocando el constructor sin parámetros
+		//2. Creamos un conjunto de enteros usando la implementaciï¿½n disponible: HashSet<T>, invocando el constructor sin parï¿½metros
 		conj1 = new HashSet<>();
 		
-		//3. Comprobamos si el conjunto está o no vacío
+		//3. Comprobamos si el conjunto estï¿½ o no vacï¿½o
 		if (conj1.isEmpty())
 		{
 			System.out.println("Conjunto vacio...");
 		}
 		
-		//4. Añadimos varios elementos al conjunto usando el método add. Si lo añadimos duplicado no lo añade porque es un conjunto
+		//4. Aï¿½adimos varios elementos al conjunto usando el mï¿½todo add. Si lo aï¿½adimos duplicado no lo aï¿½ade porque es un conjunto
 		conj1.add(1);
 		conj1.add(2);
 		if (conj1.add(2))
 		{ 
-			System.out.println("Añadido");
+			System.out.println("Aï¿½adido");
 		}else{
-			System.out.println("El elemento ya estaba. No se ha añadido");
+			System.out.println("El elemento ya estaba. No se ha aï¿½adido");
 		}
 		conj1.add(3);
 		
@@ -39,10 +39,10 @@ public class PruebaSet {
 		}
 		conj1.remove(1);
 		
-		//6. Consultamos el número de elementos en la colección
-		System.out.println("El número de elementos es: " + conj1.size());
+		//6. Consultamos el nï¿½mero de elementos en la colecciï¿½n
+		System.out.println("El nï¿½mero de elementos es: " + conj1.size());
 		
-		//7. Añadimos nuevos elementos
+		//7. Aï¿½adimos nuevos elementos
 		conj1.add(10);
 		conj1.add(2);
 		conj1.add(7);
@@ -52,26 +52,26 @@ public class PruebaSet {
 		//8. Creamos un nuevo conjunto
 		Set<Integer> conj2 = new HashSet<>();
 		
-		//9. Añadimos todos los elementos del otro conjunto en este, con una sola operación
+		//9. Aï¿½adimos todos los elementos del otro conjunto en este, con una sola operaciï¿½n
 		conj2.addAll(conj1);
 		
-		//10. Eliminamos algún elemento de conj2
+		//10. Eliminamos algï¿½n elemento de conj2
 		conj2.remove(1);
 		
-		//11. Creamos un tercer conjunto al que le añadimos todos los elementos del primero y luego le eliminamos todos los del segundo
+		//11. Creamos un tercer conjunto al que le aï¿½adimos todos los elementos del primero y luego le eliminamos todos los del segundo
 		Set<Integer> conj3 = new HashSet<>();
 		conj3.addAll(conj1);
 		conj3.removeAll(conj2);
 		
 		//12. Recorremos los tres conjuntos, iterando sobre ellos
 		System.out.println("Conjunto 1 ...");
-		recorrerColecciónIterador(conj1);
+		recorrerColeccionIterador(conj1);
 		
 		System.out.println("Conjunto 2 ...");
-		recorrerColecciónIterador(conj2);
+		recorrerColeccionIterador(conj2);
 
 		System.out.println("Conjunto 3 ...");
-		recorrerColecciónIterador(conj3);
+		recorrerColeccionIterador(conj3);
 		
 		//13. Recorremos el conjunto 1 con for-each
 		System.out.println("Conjunto 1 con for-each ...");
@@ -82,7 +82,7 @@ public class PruebaSet {
 		System.out.println();
 	}
 	
-	public static void recorrerColecciónIterador(Collection<Integer> c){
+	public static void recorrerColeccionIterador(Collection<Integer> c){
 		Iterator<Integer> it = c.iterator();
 		while (it.hasNext())
 		{

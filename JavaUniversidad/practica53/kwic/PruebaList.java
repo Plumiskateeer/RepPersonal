@@ -6,27 +6,27 @@ public class PruebaList {
 
 	public static void main (String[] args)
 	{
-		//OPERACIONES BÁSICAS
-		//1. Declaramos una collección de números enteros
+		//OPERACIONES Bï¿½SICAS
+		//1. Declaramos una collecciï¿½n de nï¿½meros enteros
 		Collection<Integer> lista1;
 	
-		//2. Creamos una lista de enteros usando la implementación disponible: ArrayList<T>, invocando el constructor sin parámetros
+		//2. Creamos una lista de enteros usando la implementaciï¿½n disponible: ArrayList<T>, invocando el constructor sin parï¿½metros
 		lista1 = new ArrayList<>();
 		
-		//3. Comprobamos si la lista está o no vacía
+		//3. Comprobamos si la lista estï¿½ o no vacï¿½a
 		if (lista1.isEmpty())
 		{
 			System.out.println("Lista vacia...");
 		}
 		
-		//4. Añadimos varios elementos a la lista usando el método add. Los añade duplicados porque es una lista
+		//4. Aï¿½adimos varios elementos a la lista usando el mï¿½todo add. Los aï¿½ade duplicados porque es una lista
 		lista1.add(1);
 		lista1.add(2);
 		if (lista1.add(2))
 		{ 
-			System.out.println("Añadido");
+			System.out.println("Aï¿½adido");
 		}else{
-			System.out.println("El elemento ya estaba. No se ha añadido");
+			System.out.println("El elemento ya estaba. No se ha aï¿½adido");
 		}
 		lista1.add(3);
 		
@@ -37,10 +37,10 @@ public class PruebaList {
 		}
 		lista1.remove(1);
 		
-		//6. Consultamos el número de elementos en la colección
-		System.out.println("El número de elementos es: " + lista1.size());
+		//6. Consultamos el nï¿½mero de elementos en la colecciï¿½n
+		System.out.println("El nï¿½mero de elementos es: " + lista1.size());
 		
-		//7. Añadimos nuevos elementos
+		//7. Aï¿½adimos nuevos elementos
 		lista1.add(10);
 		lista1.add(2);
 		lista1.add(7);
@@ -50,26 +50,26 @@ public class PruebaList {
 		//8. Creamos una nueva lista
 		Set<Integer> lista2 = new HashSet<>();
 		
-		//9. Añadimos todos los elementos de la otra lista en esta, con una sola operación
+		//9. Aï¿½adimos todos los elementos de la otra lista en esta, con una sola operaciï¿½n
 		lista2.addAll(lista1);
 		
-		//10. Eliminamos algún elemento de lista2
+		//10. Eliminamos algï¿½n elemento de lista2
 		lista2.remove(1);
 		
-		//11. Creamos una tercera lista a la que le añadimos todos los elementos de la primero y luego le eliminamos todos los de la segunda
+		//11. Creamos una tercera lista a la que le aï¿½adimos todos los elementos de la primero y luego le eliminamos todos los de la segunda
 		Set<Integer> lista3 = new HashSet<>();
 		lista3.addAll(lista1);
 		lista3.removeAll(lista2);
 		
 		//12. Recorremos las tres listas, iterando sobre ellas
 		System.out.println("Conjunto 1 ...");
-		recorrerColecciónIterador(lista1);
+		recorrerColeccionIterador(lista1);
 		
 		System.out.println("Conjunto 2 ...");
-		recorrerColecciónIterador(lista2);
+		recorrerColeccionIterador(lista2);
 
 		System.out.println("Conjunto 3 ...");
-		recorrerColecciónIterador(lista3);
+		recorrerColeccionIterador(lista3);
 		
 		//13. Recorremos la lista 1 con for-each
 		System.out.println("Conjunto 1 con for-each ...");
@@ -80,7 +80,7 @@ public class PruebaList {
 		System.out.println();
 	}
 	
-	public static void recorrerColecciónIterador(Collection<Integer> c){
+	public static void recorrerColeccionIterador(Collection<Integer> c){
 		Iterator<Integer> it = c.iterator();
 		while (it.hasNext())
 		{

@@ -17,12 +17,12 @@ public class Aleatoria implements EstructuraDeDatos{
 		datos  = new int [tam];
 		numElem = 0;
 	}
-	public int tamaño() {
+	public int tamano() {
 		return numElem;
 	}
 	
 	public void meter(int elem) {
-		int pos =  rnd.nextInt(this.tamaño()+1);
+		int pos =  rnd.nextInt(this.tamano()+1);
 
 		if(numElem == datos.length) {
 			int[] nuevo =  new int[datos.length*2];
@@ -39,7 +39,7 @@ public class Aleatoria implements EstructuraDeDatos{
 	
 	public int sacar() {
 		int sacado;
-		int pos= rnd.nextInt(this.tamaño());
+		int pos= rnd.nextInt(this.tamano());
 		
 	}
 	

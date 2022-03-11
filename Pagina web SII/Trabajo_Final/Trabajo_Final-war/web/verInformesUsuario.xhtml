@@ -10,23 +10,23 @@
                 <h:form id="controlInformes">
                     <c:forEach var="contador"  begin="0" end="#{controlInformes.informesUsuario(controlAutorizacion.usuario)-1}">
                             <hr>
-                                    <table>
-                                        <tr>
-                                            <td>Titulo: </td>
-                                            <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getTitulo()}"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Contenido: </td>
-                                            <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getContenido()}"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Actividad: </td>
-                                            <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getActividad().getTitulo()}"/></td>
-                                        </tr>
-                                        
-                                    </table>
-                                    <li><h:commandButton value="Descargar informe (PDF)"/></li>
-                                </hr>
+                                <table>
+                                    <tr>
+                                        <td>Titulo: </td>
+                                        <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getTitulo()}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Contenido: </td>
+                                        <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getContenido()}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Actividad: </td>
+                                        <td><h:outputText value="#{controlInformes.getInformesUsuario().get(contador).getActividad().getTitulo()}"/></td>
+                                    </tr>
+
+                                </table>
+                                <li><h:commandButton value="Descargar informe (PDF)"/></li>
+                            </hr>
                     </c:forEach>
                 </h:form>
             </c:when>

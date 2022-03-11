@@ -44,7 +44,7 @@ public class Coleccion {
 		}
 		
 	}
-	public static void añade(int elemen) {
+	public static void anade(int elemen) {
 		enteros.add(elemen);
 	}
 	public static void elimina(int elem) {

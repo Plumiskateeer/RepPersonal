@@ -35,10 +35,9 @@ public class Pila implements EstructuraDeDatos{
 	
 	public int sacar(){
 		int sacado;
-		if()
 		
 	}
-	public int tamaño() {
+	public int tamano() {
 		return numElem;
 	}
 	
@@ -49,7 +48,7 @@ public class Pila implements EstructuraDeDatos{
 		}else {
 			resul="[";
 			for(int i =0; i<numElem-1;i++) {
-				resul = resul +datos[i]
+				resul = resul +datos[i];
 			}
 		}
 	}

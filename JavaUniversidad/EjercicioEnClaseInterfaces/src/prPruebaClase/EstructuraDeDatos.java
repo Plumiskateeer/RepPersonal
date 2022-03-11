@@ -4,8 +4,8 @@ public interface EstructuraDeDatos {
 
 	void meter(int elem);
 	int sacar();
-	int tamaño();
+	int tamano();
 	default boolean estaVacia() {
-		return(tamaño()==0);
+		return(tamano()==0);
 	}
 }
